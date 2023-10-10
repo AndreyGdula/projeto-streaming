@@ -224,3 +224,9 @@ div#dblur {
 .slick-arrow, .slick-dots {
     display: none !important;
 }
+
+@media screen and (max-width: 450px) {
+    .arrow {
+        display: none !important;
+    }
+}
