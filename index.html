@@ -36,7 +36,7 @@
     <main>
         <h2>Últimos lançamentos</h2>
         <div class="films">
-            <span class="material-symbols-outlined" id="arrow-left" class="left arrow" onclick="clickLeft()">
+            <span class="material-symbols-outlined" id="arrow-left" class="left" onclick="clickLeft()">
                 chevron_left
             </span>
             <div class="carrossel">
@@ -62,14 +62,14 @@
                     <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm">
                 </a>
             </div>
-            <span class="material-symbols-outlined" id="arrow-right" class="right arrow" 
+            <span class="material-symbols-outlined" id="arrow-right" class="right" 
             onclick="clickRight()">
                 chevron_right
             </span>
         </div>
         <h2>Em alta</h2>
         <div class="films">
-            <span class="material-symbols-outlined" id="arrow-left-1" class="left arrow" onclick="clickLeft()">
+            <span class="material-symbols-outlined" id="arrow-left-1" class="left" onclick="clickLeft()">
                 chevron_left
             </span>
             <div class="carrossel-1">
@@ -95,7 +95,7 @@
                     <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm">
                 </a>
             </div>
-            <span class="material-symbols-outlined" id="arrow-right-1" class="right arrow" 
+            <span class="material-symbols-outlined" id="arrow-right-1" class="right" 
             onclick="clickRight()">
                 chevron_right
             </span>
@@ -112,11 +112,13 @@
                 itens.style.display = 'none'
                 span.textContent = 'menu'
                 dblur.style.display = 'none'
+                document.body.style.overflowY = 'auto';
             }
             else {
                 itens.style.display = 'block'
                 span.textContent = 'menu_open'
                 dblur.style.display = 'block'
+                document.body.style.overflowY = 'hidden';
             }
         }
 
