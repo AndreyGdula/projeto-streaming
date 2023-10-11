@@ -225,8 +225,22 @@ div#dblur {
     display: none !important;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
     span#arrow-right, span#arrow-left, span#arrow-right-1, span#arrow-left-1 {
         display: none !important;
+        overflow-x: hidden;
     }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    div.films {
+        margin-top: 20px;
+    }
+
+    .link-film:hover {
+        transform: scale(1);
+    }
+
 }

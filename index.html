@@ -40,26 +40,28 @@
                 chevron_left
             </span>
             <div class="carrossel">
+
+                 <!-- Telas Grandes -->
                 <a href="" class="link-film">
-                    <img src="images/img-media/beckham.jpg" alt="beckham" class="imgfilm">
+                    <img src="images/img-media/beckham.jpg" alt="beckham" class="imgfilm" id="img1">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/lupin.jpg" alt="lupin" class="imgfilm">
+                    <img src="images/img-media/lupin.jpg" alt="lupin" class="imgfilm" id="img2">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/onepiece.jpg" alt="onepiece" class="imgfilm">
+                    <img src="images/img-media/onepiece.jpg" alt="onepiece" class="imgfilm" id="img3">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/paraiso.jpg" alt="paraiso" class="imgfilm">
+                    <img src="images/img-media/paraiso.jpg" alt="paraiso" class="imgfilm" id="img4">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/peaky.jpg" alt="peaky" class="imgfilm">
+                    <img src="images/img-media/peaky.jpg" alt="peaky" class="imgfilm" id="img5">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/stone.jpg" alt="stone" class="imgfilm">
+                    <img src="images/img-media/stone.jpg" alt="stone" class="imgfilm" id="img6">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm">
+                    <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm" id="img7">
                 </a>
             </div>
             <span class="material-symbols-outlined" id="arrow-right" class="right" 
@@ -73,26 +75,27 @@
                 chevron_left
             </span>
             <div class="carrossel-1">
+                 <!-- Telas grandes -->
                 <a href="" class="link-film">
-                    <img src="images/img-media/beckham.jpg" alt="beckham" class="imgfilm">
+                    <img src="images/img-media/beckham.jpg" alt="beckham" class="imgfilm" id="img11">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/lupin.jpg" alt="lupin" class="imgfilm">
+                    <img src="images/img-media/lupin.jpg" alt="lupin" class="imgfilm" id="img22">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/onepiece.jpg" alt="onepiece" class="imgfilm">
+                    <img src="images/img-media/onepiece.jpg" alt="onepiece" class="imgfilm" id="img33">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/paraiso.jpg" alt="paraiso" class="imgfilm">
+                    <img src="images/img-media/paraiso.jpg" alt="paraiso" class="imgfilm" id="img44">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/peaky.jpg" alt="peaky" class="imgfilm">
+                    <img src="images/img-media/peaky.jpg" alt="peaky" class="imgfilm" id="img55">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/stone.jpg" alt="stone" class="imgfilm">
+                    <img src="images/img-media/stone.jpg" alt="stone" class="imgfilm" id="img66">
                 </a>
                 <a href="" class="link-film">
-                    <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm">
+                    <img src="images/img-media/paraiso.jpg" alt="No Image Found" class="imgfilm" id="img77">
                 </a>
             </div>
             <span class="material-symbols-outlined" id="arrow-right-1" class="right" 
@@ -105,6 +108,46 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="style/slick/slick.min.js"></script>
     <script>
+        function atualizarImagem() {
+            var larguraTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+            if (larguraTela <= 800) {
+                document.getElementById('img1').src = 'images/media-small/beckham.jpg_large';
+                document.getElementById('img2').src = 'images/media-small/lupin-small.jpg';
+                document.getElementById('img3').src = 'images/media-small/onepiece-small.jpg';
+                document.getElementById('img4').src = 'images/media-small/paraiso-small.jpg';
+                document.getElementById('img5').src = 'images/media-small/peaky-small.jpg';
+                document.getElementById('img6').src = 'images/media-small/stone-small.jpg';
+                document.getElementById('img7').src = 'images/media-small/paraiso-small.jpg';
+
+                document.getElementById('img11').src = 'images/media-small/beckham.jpg_large';
+                document.getElementById('img22').src = 'images/media-small/lupin-small.jpg';
+                document.getElementById('img33').src = 'images/media-small/onepiece-small.jpg';
+                document.getElementById('img44').src = 'images/media-small/paraiso-small.jpg';
+                document.getElementById('img55').src = 'images/media-small/peaky-small.jpg';
+                document.getElementById('img66').src = 'images/media-small/stone-small.jpg';
+                document.getElementById('img77').src = 'images/media-small/paraiso-small.jpg';
+            } else {
+                document.getElementById('img1').src = 'images/img-media/beckham.jpg';
+                document.getElementById('img2').src = 'images/img-media/lupin.jpg';
+                document.getElementById('img3').src = 'images/img-media/onepiece.jpg';
+                document.getElementById('img4').src = 'images/img-media/paraiso.jpg';
+                document.getElementById('img5').src = 'images/img-media/peaky.jpg';
+                document.getElementById('img6').src = 'images/img-media/stone.jpg';
+                document.getElementById('img7').src = 'images/img-media/paraiso.jpg';
+
+                document.getElementById('img11').src = 'images/img-media/beckham.jpg';
+                document.getElementById('img22').src = 'images/img-media/lupin.jpg';
+                document.getElementById('img33').src = 'images/img-media/onepiece.jpg';
+                document.getElementById('img44').src = 'images/img-media/paraiso.jpg';
+                document.getElementById('img55').src = 'images/img-media/peaky.jpg';
+                document.getElementById('img66').src = 'images/img-media/stone.jpg';
+                document.getElementById('img77').src = 'images/img-media/paraiso.jpg';
+            }
+        }
+        window.onload = atualizarImagem;
+        window.onresize = atualizarImagem;
+
         function clickMenu() {
             var span = document.getElementById('i-menu')
 
@@ -140,15 +183,15 @@
                     {
                     breakpoint: 800,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 2
                     }
                     },
                     {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToShow: 3,
+                        slidesToScroll: 2
                     }
                 }]
             });
@@ -179,14 +222,14 @@
                     {
                     breakpoint: 800,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 2
                     }
                     },
                     {
                     breakpoint: 480,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 3,
                         slidesToScroll: 1
                     }
                 }]
